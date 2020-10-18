@@ -28,3 +28,5 @@ We used the data set from the clinical data from MIMIC-II. In this data set, we 
 
 ## What's next for Vitalizer
  We want to make predictions for more diseases in the future. And expand into collecting data of more nearby doctors. 
+ 
+ ### Check out the website at : http://vitalizer.tech/
