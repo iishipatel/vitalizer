@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="logo1.png">
+</p>
+
 ## Inspiration
 One of the biggest inspirations for this project was the entire scenario revolving around getting **health check-ups** and **reports**. Nowadays, it has become increasingly difficult and expensive to get regular and accurate checkups. We wanted a product that would generate medical reports based on minimal requirements and most of all, would be free of cost for the users.
 
