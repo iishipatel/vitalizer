@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Spin } from "antd";
+import { Spin, Button } from "antd";
+import { Link } from "react-router-dom";
 
 function DiseaseIndividual(props) {
   const [disease, setDiseaseName] = useState("");
@@ -19,11 +20,11 @@ function DiseaseIndividual(props) {
 
   const APIs = {
     artery: 0,
-    liver: 1,
-    malignancy: 2,
-    pulmonary: 3,
-    renal: 4,
-    resp: 5,
+    liver: 2,
+    malignancy: 3,
+    pulmonary: 5,
+    renal: 1,
+    resp: 4,
     stroke: 6,
   };
 
@@ -57,13 +58,24 @@ function DiseaseIndividual(props) {
         <div className="container" style={{ marginBottom: "3rem" }}>
           <div
             style={{
+              display: "flex",
+              justifyContent: "space-between",
+              paddingTop: "32px",
               fontWeight: 700,
               fontSize: 24,
               paddingBottom: 10,
               borderBottom: "1px solid #E7EBF0",
             }}
           >
-            {diseases[disease]}
+            <div>{diseases[disease]}</div>
+
+            <div>
+              <Button className="first_btn btn_landing">
+                <Link to="/doctors" style={{ fontWeight: 600 }}>
+                  VIEW NEARBY DOCTORS
+                </Link>
+              </Button>
+            </div>
           </div>
 
           <div style={{ paddingTop: "2rem", fontWeight: 600, fontSize: 16 }}>

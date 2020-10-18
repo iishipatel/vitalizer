@@ -19,16 +19,27 @@ body {
 }
 
 .circleimg {
-  position: absolute;
+  position: fixed;
   left: 0px;
-  /* bottom: 0; */
-  margin-top: 22px;
+  /* bottom: 0px; */
   z-index: 1;
+  margin-top: 42px;
   /* transform: scale(0.9); */
 }
 
 .alert_form {
   z-index: 200;
+  position: fixed;
+  margin-top: 42px;
+  width: 388px !important;
+  margin-left: 88px;
+}
+
+@media (max-width: 768px) {
+  .alert_form {
+    position: absolute;
+    z-index: 200;
+  }
 }
 
 .form-view {
@@ -75,4 +86,42 @@ body {
 
 .div-head {
   overflow-y: hidden !important;
+}
+
+/* @media (min-width: 768px) {
+  .formdatalist {
+    overflow-y: scroll;
+    height: 600px;
+    padding-bottom: 42px;
+    padding-right: 8px;
+    scrollbar-width: 0px;
+  }
+
+  .div-head {
+    height: 90vh;
+  }
+  .parent_scroll {
+    overflow: hidden;
+  }
+
+  .formdatalist::-webkit-scrollbar {
+    display: none;
+  }
+
+  .div-head::-webkit-scrollbar {
+    display: none;
+  }
+} */
+
+.parent_scroll {
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .navwidth {
+    max-width: 100% !important;
+  }
+  .parent_scroll {
+    margin-right: 32px;
+  }
 }
