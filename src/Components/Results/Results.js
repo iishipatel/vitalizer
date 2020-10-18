@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import ResultCard from "./ResultCard";
 import { LinkOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 import "./Results.css";
 
 import { Switch } from "antd";
@@ -138,8 +139,8 @@ function Results(props) {
                 userData={userData}
                 diseases={diseases}
               />
-              <a
-                href="/doctors"
+              <Link
+                to="/doctors"
                 className={
                   check
                     ? "cursor-change dark_text"
@@ -155,7 +156,7 @@ function Results(props) {
                   }
                 />
                 Doctors near you
-              </a>
+              </Link>
 
               <div
                 className={
