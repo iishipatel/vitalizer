@@ -1,0 +1,44 @@
+.ant-progress-text {
+  color: #dfe8f6 !important;
+}
+
+.dark {
+  background-color: #11151b;
+  color: #eff3f8;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding-top: 3.5rem;
+}
+
+.light {
+  background-color: #dfe8f6;
+  color: #eff3f8;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding-top: 3.5rem;
+}
+
+.dark_text {
+  color: #e7ebf0 !important;
+  /* cursor: pointer; */
+}
+
+.light_text {
+  color: black !important;
+  /* cursor: pointer; */
+}
+
+.switch_toggle {
+  float: right;
+  margin-top: 14px;
+}
+
+.ant-switch-checked {
+  background-color: rgb(14, 212, 112);
+}
+
+.cursor-change {
+  cursor: pointer;
+}

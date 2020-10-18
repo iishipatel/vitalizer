@@ -1,0 +1,92 @@
+.circle_landing {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+}
+body {
+  background: #11151b;
+}
+
+.circle_logo {
+  position: absolute;
+  top: 24px;
+  left: 68px;
+  /* z-index: -1; */
+}
+
+.circle_doc {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.heading_landing {
+  z-index: 20;
+  height: 92px;
+  width: 662px;
+  left: 84px;
+  top: 144px;
+  position: absolute;
+  color: #e7e7e7;
+  font-size: 48px;
+
+  /* height: 100vh; */
+}
+
+.p_landing {
+  margin-top: 24px;
+  z-index: 20;
+  color: aliceblue;
+  height: 106px;
+  width: 567px;
+  left: 84px;
+  top: 261px;
+  position: absolute;
+  font-size: 20px;
+}
+
+.Button_grp_landing {
+  top: 77%;
+  left: 84px;
+  position: absolute;
+  margin-right: 12px;
+}
+
+.first_btn {
+  /* margin-left: 34px; */
+  /* padding: 2px 124px; */
+}
+
+.btn_landing {
+  background-color: #0ed470;
+  color: #080808;
+  border: 0.5px solid #0ed470;
+  /* padding-left: 12px;
+  padding-right: 12px; */
+}
+
+.btn_landing:hover {
+  background-color: #0ed470;
+  color: black;
+  text-decoration: none !important;
+  /* border: 0.5px solid #0ed470; */
+  /* outline: none; */
+}
+
+.landing_bg {
+  background: #11151b;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+.green_hulk {
+  color: #0ed470;
+}
+
+.ant-btn-block {
+  padding: 4px 64px;
+  width: 100%;
+}

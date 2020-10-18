@@ -1,0 +1,100 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { Spin } from "antd";
+
+function DiseaseIndividual(props) {
+  const [disease, setDiseaseName] = useState("");
+  const [spintime, setspintime] = useState(true);
+  const [data, setData] = useState({});
+  const [symp, setSymp] = useState([]);
+  const diseases = {
+    artery: "Coronary Artery Disease",
+    liver: "Liver Disease",
+    malignancy: "Malignancy",
+    pulmonary: "Chronic Obstructive Pulmonary Disease",
+    renal: "Chronic Renal Disease",
+    resp: "Respiratory Disease (non-COPD)",
+    stroke: "Stroke",
+  };
+
+  const APIs = {
+    artery: 0,
+    liver: 1,
+    malignancy: 2,
+    pulmonary: 3,
+    renal: 4,
+    resp: 5,
+    stroke: 6,
+  };
+
+  useEffect(() => {
+    setDiseaseName(props.location.state.disease);
+    axios
+      .get("https://healthinsafe.herokuapp.com/disease_info")
+      .then((res) => {
+        console.log(res);
+        setData(res.data.disease_info[APIs[props.location.state.disease]]);
+        setSymp(
+          res.data.disease_info[
+            APIs[props.location.state.disease]
+          ].PossibleSymptoms.split(",")
+        );
+        setspintime(false);
+      })
+      .catch((err) => setspintime(false));
+    // eslint-disable-next-line
+  }, []);
+
+  return (
+    <Spin tip="Loading..." spinning={spintime}>
+      <div
+        style={{
+          backgroundColor: "#11151b",
+          color: "#E7EBF0",
+          paddingTop: "3.5rem",
+        }}
+      >
+        <div className="container" style={{ marginBottom: "3rem" }}>
+          <div
+            style={{
+              fontWeight: 700,
+              fontSize: 24,
+              paddingBottom: 10,
+              borderBottom: "1px solid #E7EBF0",
+            }}
+          >
+            {diseases[disease]}
+          </div>
+
+          <div style={{ paddingTop: "2rem", fontWeight: 600, fontSize: 16 }}>
+            Symptoms:
+          </div>
+          <div>
+            <ul style={{ paddingLeft: 17 }}>
+              {symp.map((el) => {
+                return <li>{el}</li>;
+              })}
+            </ul>
+          </div>
+
+          <div style={{ paddingTop: "2rem", fontWeight: 600, fontSize: 16 }}>
+            Description:
+          </div>
+          <div>{data.Description}</div>
+
+          <div style={{ paddingTop: "2rem", fontWeight: 600, fontSize: 16 }}>
+            Medical Condition:
+          </div>
+          <div>{data.MedicalCondition}</div>
+
+          <div style={{ paddingTop: "2rem", fontWeight: 600, fontSize: 16 }}>
+            Treatment Description:
+          </div>
+          <div>{data.TreatmentDescription}</div>
+        </div>
+      </div>
+    </Spin>
+  );
+}
+
+export default DiseaseIndividual;
