@@ -1,68 +1,26 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Inspiration
+One of the biggest inspirations for this project was the entire scenario revolving around getting **health check-ups** and **reports**. Nowadays, it has become increasingly difficult and expensive to get regular and accurate checkups. We wanted a product that would generate medical reports based on minimal requirements and most of all, would be free of cost for the users.
 
-## Available Scripts
+## What it does
+With our product users can check the **probability** of having a rather life-threatening disease by just **checking their vitals at home**. Our **AI-curated model** carefully analyzes user fed data and gives a probable prediction of the severity of the ailment. We generate a tailored report for the users based upon vitals that can easily be measured in the comfort of their homes. The simple parameters that we consider are your, age, gender, height, weight, body temperature, heart rate, and blood pressure.
 
-In the project directory, you can run:
+This way we let the user know if he/she really needs to rush to the hospital or is just under the weather. Our model gives the user a probable score of having diseases which combined with their symptoms can help them make the decision of going to hospitals in these tough times. To help with the decision making we also provide **thorough information about the disease** for user satisfaction. An exhaustive list of symptoms to cross-check your situation. We believe in providing the smoothest User Experience as our target audience varies from the curious kid to the most elderly. Hence, our web app follows a **simple UI** and **easy to navigate UX**.
 
-### `npm start`
+## How we built it
+We used the data set from the clinical data from MIMIC-II. In this data set, we predict the probability of having serious life-threatening diseases on the basis of vitals such as height, weight, bp, heart rate, and body temperature. Since the data set was tricky to handle with a lot of missing data as well as different formats we used advanced featured engineering to train it upon a support vector machine classification algorithm. Then we use the confidence score for predicting the probability of having a certain disease. For feature engineering, we use Numpy and Pandas, and for the model training, we used Scikit learn. We made our own API using a flask to make these predictions. For disease information and extensive symptoms recall, we use used APIMEDIC's API. For nearby doctor search, we used BetterDoctor's API and used it alongside google maps. Now coming to the front end, we linked the above-mentioned APIs in our web interface. We made a simple and easy to understand UI to take input from the user about his or her vitals and then output the predictions. We made sure the UI/UX is very neat understandable for easy understanding for a vast range of users. We have also added a light/dark toggle :)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
+## Accomplishments that we're proud of
+1. Support Vector Regression based prediction for the probability of disease
+2. Average Accuracy: 88.40 % on MIMIC-II dataset
+3. Making accurate prediction through minimal vitals using advance
+4. Feature engineering
+5. Creating our own API with this custom model
+6. Attractive dashboard display
+7. Easy to navigate user experience
+8. Data fed anonymously to maintain the privacy of medical-related information
+9. Locating nearby health consultants/doctors
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## What's next for Vitalizer
+ We want to make predictions for more diseases in the future. And expand into collecting data of more nearby doctors. 
