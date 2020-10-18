@@ -2,7 +2,7 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 100vh;
+  /* height: 100vh; */
 }
 body {
   background: #11151b;
@@ -16,7 +16,7 @@ body {
 }
 
 .circle_doc {
-  position: absolute;
+  position: absolute;a
   bottom: 0;
   right: 0;
 }
@@ -53,11 +53,6 @@ body {
   margin-right: 12px;
 }
 
-.first_btn {
-  /* margin-left: 34px; */
-  /* padding: 2px 124px; */
-}
-
 .btn_landing {
   background-color: #0ed470;
   color: #080808;
@@ -89,4 +84,41 @@ a:hover {
 .ant-btn-block {
   padding: 4px 64px;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .heading_landing {
+    z-index: 20;
+    height: 62px;
+    width: 90%;
+    left: 12px;
+    top: 100px;
+    position: absolute;
+    color: #e7e7e7;
+    font-size: 32px;
+  }
+
+  .p_landing {
+    margin-top: 24px;
+    z-index: 20;
+    color: aliceblue;
+    height: 106px;
+    width: 90%;
+    left: 12px;
+    top: 189px;
+    position: absolute;
+    font-size: 20px;
+  }
+  .circle_doc {
+    position: absolute;
+
+    right: 0;
+    transform: scale(0.7);
+  }
+  .Button_grp_landing {
+    top: 80%;
+    left: 84px;
+    position: absolute;
+    margin-right: 12px;
+  }
 }
